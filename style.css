@@ -1,0 +1,111 @@
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+    
+     :root {
+        --primary-color: #EF2995;
+        --accent-color: #4824FC;
+    }
+    
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    
+    #welcome-section {
+        background-image: url(assets/Grupo_41.svg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 0 px;
+        height: 100vh;
+        z-index: 1;
+    }
+    
+    #initial_message {
+        color: white;
+        padding: 20px;
+    }
+    
+    #logotipo {
+        width: 500px;
+        height: auto;
+    }
+    
+    .la_frase {
+        width: 500px;
+        height: auto;
+    }
+    
+    #link_descarga {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+    }
+    
+    #items {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .mycontainer {
+        background-color: var(--accent-color);
+        padding: 40px 25px 40px 25px;
+        border-radius: 20%;
+    }
+    
+    i {
+        color: var(--primary-color)
+    }
+    
+    .mycontainer:hover {
+        background-color: var(--primary-color);
+        animation-name: movement;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    
+    .mycontainer:hover i {
+        color: var(--accent-color);
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes movement {
+        0% {
+            top: 0px;
+        }
+        100% {
+            top: 10px;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        #items {
+            flex-wrap: wrap-reverse
+        }
+        img {
+            width: 200px;
+            height: auto;
+        }
+        .la_frase {
+            width: 300px;
+            height: auto;
+        }
+        .carousel {
+            width: 300px;
+            height: auto;
+        }
+    }
